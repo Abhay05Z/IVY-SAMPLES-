@@ -202,42 +202,46 @@ function initReelModal() {
   const closeButtons = document.querySelectorAll('[data-close-reel]');
   const reelTitle = document.getElementById('reel-title');
   const reelDesc = document.getElementById('reel-desc');
-  const reelMedia = document.getElementById('reel-media-placeholder');
+  const modalVideo = document.getElementById('reel-modal-video');
 
   const reels = [
     {
-      title: 'Zumba Dance & Fitness Floor',
-      desc: 'High-energy Zumba group choreography with Sulochana Sharma at Mahima\'s Trinity Mall, Swej Farm.',
-      image: 'assets/images/zumba_fitness.jpg'
+      title: 'Zumba Dance & High Energy Floor',
+      desc: 'High-energy Zumba group choreography with coach Sulochana Sharma at Mahima\'s Trinity Mall, Swej Farm.',
+      video: 'assets/videos/studio_reel_1.mp4',
+      poster: 'assets/images/thumb_studio_reel_1.jpg'
     },
     {
-      title: 'Classical Morning Yoga & Asana',
-      desc: 'Deep breathwork, pranayama, and mindful spinal alignment led by certified yoga teachers.',
-      image: 'assets/images/yoga_asana.jpg'
+      title: 'Hardcore Gym & Heavy Power Lifts',
+      desc: 'Olympic barbell deadlifts, power racks, and functional conditioning on our heavy workout turf.',
+      video: 'assets/videos/studio_reel_2.mp4',
+      poster: 'assets/images/thumb_studio_reel_2.jpg'
     },
     {
-      title: 'Hardcore Gym & Heavy Lifts',
-      desc: 'Dumbbells, Olympic barbell stations, and multi-cable functional towers for heavy bodybuilding.',
-      image: 'assets/images/strength_training.jpg'
+      title: 'Studio Floor Walkthrough & Mobility',
+      desc: 'Warm community environment, mindful mobility, and full studio tour at Swej Farm, Sodala, Jaipur.',
+      video: 'assets/videos/studio_reel_3.mp4',
+      poster: 'assets/images/thumb_studio_reel_3.jpg'
     },
     {
-      title: 'Cold Plunge & Ice Bath Therapy',
-      desc: 'Rapid post-workout recovery reducing acute muscular soreness and boosting circulation.',
-      image: 'assets/images/ice_bath_recovery.jpg'
+      title: 'Cold Plunge & Ice Bath Recovery',
+      desc: 'Sub-zero cryo immersion reducing acute muscular soreness and speeding metabolic recovery.',
+      video: 'assets/videos/studio_reel_1.mp4',
+      poster: 'assets/images/ice_bath_recovery.jpg'
     }
   ];
 
-  let currentIdx = 0;
-
   function loadReel(idx) {
-    currentIdx = idx;
     const r = reels[idx];
     if (reelTitle) reelTitle.textContent = r.title;
     if (reelDesc) reelDesc.textContent = r.desc;
-    if (reelMedia) {
-      reelMedia.style.backgroundImage = `url(${r.image})`;
+    if (modalVideo) {
+      modalVideo.src = r.video;
+      modalVideo.poster = r.poster;
+      modalVideo.load();
+      modalVideo.play().catch(() => {});
     }
-    // Update thumbnail highlights
+    // Update tab highlights
     document.querySelectorAll('.reel-tab').forEach((tab, i) => {
       if (i === idx) {
         tab.style.borderColor = 'var(--accent-primary)';
@@ -254,30 +258,47 @@ function initReelModal() {
       e.preventDefault();
       const idx = parseInt(btn.getAttribute('data-reel-index') || '0', 10);
       loadReel(idx);
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
+      if (modal) {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
     });
   });
 
+  function closeModal() {
+    if (modal) modal.classList.remove('open');
+    document.body.style.overflow = '';
+    if (modalVideo) modalVideo.pause();
+  }
+
   closeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    btn.addEventListener('click', closeModal);
   });
 
   if (modal) {
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
-      }
+      if (e.target === modal) closeModal();
     });
   }
 
-  // Bind reel tabs inside modal
   document.querySelectorAll('.reel-tab').forEach((tab, i) => {
     tab.addEventListener('click', () => loadReel(i));
+  });
+
+  // Sound toggle button for video reels
+  document.querySelectorAll('.reel-sound-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.reel-card, .reel-video-wrapper') || btn.parentElement;
+      const video = card ? card.querySelector('video') : null;
+      if (video) {
+        video.muted = !video.muted;
+        const icon = btn.querySelector('i');
+        if (icon) {
+          icon.className = video.muted ? 'ph-bold ph-speaker-slash' : 'ph-bold ph-speaker-high';
+        }
+      }
+    });
   });
 }
 

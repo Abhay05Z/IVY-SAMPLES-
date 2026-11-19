@@ -66,28 +66,7 @@
 <body>
   <!-- Theme Switcher Floating Bar -->
     <!-- Minimized Floating Bottom Center Dock -->
-  <nav class="bottom-dock" aria-label="Palette and Studio Switcher">
-    <a href="index.html" class="dock-pill " title="Main Portal">🏠 Portal</a>
-    <div class="dock-divider"></div>
-    <a href="page-sage.html" class="dock-pill " title="Sage Edition">🌿 Sage</a>
-    <a href="page-neon.html" class="dock-pill " title="Neon Edition">⚡ Neon</a>
-    <a href="page-crimson.html" class="dock-pill active-crimson" title="Crimson Edition">🔥 Crimson</a>
-    <div class="dock-divider"></div>
-    <a href="gallery.html" class="dock-pill" title="Gallery">📸 Gallery</a>
-    <a href="schedule.html" class="dock-pill" title="Batches">📅 Batches</a>
-  </nav>
-
-  <!-- Floating Quick Actions: WhatsApp & Instagram -->
-  <div class="floating-social-actions" aria-label="Quick Connect">
-    <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-whatsapp-float" aria-label="Chat on WhatsApp">
-      <i class="ph-bold ph-whatsapp-logo"></i>
-      <span class="tooltip">WhatsApp Studio</span>
-    </a>
-    <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-instagram-float" aria-label="Follow on Instagram">
-      <i class="ph-bold ph-instagram-logo"></i>
-      <span class="tooltip">Instagram @ivy_fitness_studio</span>
-    </a>
-  </div>
+  
 
   <header>
     <nav class="nav-floating" style="background-color: rgba(31, 2, 5, 0.92); border-color: rgba(255, 240, 220, 0.25); color: #FFF0DC;" aria-label="Main Navigation">
@@ -464,5 +443,29 @@
 
   <script src="assets/js/main.js"></script>
   <script src="assets/js/runner.js"></script>
+
+  <!-- Bottom-Left: Portal & Palette Dock -->
+  <nav id="bottom-dock-left" class="bottom-dock-left" aria-label="Portal & Palette Switcher" style="position: fixed !important; bottom: 18px !important; left: 18px !important; right: auto !important; top: auto !important; transform: none !important; z-index: 99999 !important; display: flex !important; align-items: center !important; gap: 6px !important; background-color: rgba(18, 18, 18, 0.94) !important; border: 1px solid rgba(255, 255, 255, 0.20) !important; backdrop-filter: blur(16px) !important; -webkit-backdrop-filter: blur(16px) !important; padding: 5px 8px !important; border-radius: 9999px !important; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important; max-width: calc(100vw - 130px) !important; overflow-x: auto !important; scrollbar-width: none !important; user-select: none !important;">
+    <a href="index.html" class="dock-pill" title="Main Studio Portal" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; padding: 5px 10px !important; border-radius: 9999px !important; font-size: 11px !important; font-weight: 600 !important; text-decoration: none !important; white-space: nowrap !important; color: #E5E7EB !important; background: transparent !important; transition: all 0.2s ease !important;">🏠 Portal</a>
+    <span class="dock-divider" style="width: 1px !important; height: 14px !important; background-color: rgba(255, 255, 255, 0.22) !important; display: inline-block !important; flex-shrink: 0 !important;"></span>
+    <a href="page-sage.html" class="dock-pill" title="Pale Sage & Forest Sage Edition" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; padding: 5px 10px !important; border-radius: 9999px !important; font-size: 11px !important; font-weight: 600 !important; text-decoration: none !important; white-space: nowrap !important; color: #E5E7EB !important; background: transparent !important; transition: all 0.2s ease !important;">🌿 Sage</a>
+    <a href="page-neon.html" class="dock-pill" title="Vibrant Neon Yellow & Electric Blue Edition" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; padding: 5px 10px !important; border-radius: 9999px !important; font-size: 11px !important; font-weight: 600 !important; text-decoration: none !important; white-space: nowrap !important; color: #E5E7EB !important; background: transparent !important; transition: all 0.2s ease !important;">⚡ Neon</a>
+    <a href="page-crimson.html" class="dock-pill active-crimson" title="Deep Crimson Burgundy & Warm Ivory Edition" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; padding: 5px 10px !important; border-radius: 9999px !important; font-size: 11px !important; font-weight: 700 !important; text-decoration: none !important; white-space: nowrap !important; background-color: #790B13 !important; color: #FFF0DC !important; transition: all 0.2s ease !important;">🔥 Crimson</a>
+    <span class="dock-divider" style="width: 1px !important; height: 14px !important; background-color: rgba(255, 255, 255, 0.22) !important; display: inline-block !important; flex-shrink: 0 !important;"></span>
+    <a href="gallery.html" class="dock-pill" title="Photo & Video Gallery" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; padding: 5px 10px !important; border-radius: 9999px !important; font-size: 11px !important; font-weight: 600 !important; text-decoration: none !important; white-space: nowrap !important; color: #E5E7EB !important; background: transparent !important; transition: all 0.2s ease !important;">📸 Gallery</a>
+    <a href="schedule.html" class="dock-pill" title="Batch Timetable & Schedule" style="display: inline-flex !important; align-items: center !important; gap: 4px !important; padding: 5px 10px !important; border-radius: 9999px !important; font-size: 11px !important; font-weight: 600 !important; text-decoration: none !important; white-space: nowrap !important; color: #E5E7EB !important; background: transparent !important; transition: all 0.2s ease !important;">📅 Batches</a>
+  </nav>
+
+  <!-- Bottom-Right: Floating WhatsApp & Instagram Buttons -->
+  <div id="floating-social-right" class="floating-social-right" aria-label="Social Quick Connect" style="position: fixed !important; bottom: 18px !important; right: 18px !important; left: auto !important; top: auto !important; transform: none !important; z-index: 99999 !important; display: flex !important; align-items: center !important; gap: 10px !important;">
+    <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="social-bubble bubble-whatsapp" title="WhatsApp Studio (+91 88244 59354)" aria-label="Chat on WhatsApp" style="width: 48px !important; height: 48px !important; border-radius: 9999px !important; background-color: #25D366 !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; color: #FFFFFF !important; font-size: 24px !important; text-decoration: none !important; border: 2px solid rgba(255, 255, 255, 0.9) !important; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45) !important; transition: transform 0.25s ease, box-shadow 0.25s ease !important; position: relative !important;">
+      <i class="ph-bold ph-whatsapp-logo" style="font-size: 26px;"></i>
+      <span class="tooltip" style="position: absolute !important; bottom: 58px !important; right: 0 !important; background-color: rgba(18, 18, 18, 0.95) !important; color: #FFFFFF !important; padding: 4px 10px !important; border-radius: 6px !important; font-size: 11px !important; font-weight: 600 !important; white-space: nowrap !important; pointer-events: none !important; border: 1px solid rgba(255, 255, 255, 0.18) !important;">WhatsApp Studio</span>
+    </a>
+    <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" class="social-bubble bubble-instagram" title="Instagram @ivy_fitness_studio" aria-label="Follow on Instagram" style="width: 48px !important; height: 48px !important; border-radius: 9999px !important; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; color: #FFFFFF !important; font-size: 24px !important; text-decoration: none !important; border: 2px solid rgba(255, 255, 255, 0.9) !important; box-shadow: 0 8px 24px rgba(220, 39, 67, 0.45) !important; transition: transform 0.25s ease, box-shadow 0.25s ease !important; position: relative !important;">
+      <i class="ph-bold ph-instagram-logo" style="font-size: 26px;"></i>
+      <span class="tooltip" style="position: absolute !important; bottom: 58px !important; right: 0 !important; background-color: rgba(18, 18, 18, 0.95) !important; color: #FFFFFF !important; padding: 4px 10px !important; border-radius: 6px !important; font-size: 11px !important; font-weight: 600 !important; white-space: nowrap !important; pointer-events: none !important; border: 1px solid rgba(255, 255, 255, 0.18) !important;">Instagram @ivy_fitness_studio</span>
+    </a>
+  </div>
 </body>
 </html>
