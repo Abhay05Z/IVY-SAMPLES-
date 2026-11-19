@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batch Timetable & Schedule | Ivy Studio Jaipur</title>
+  <meta name="description" content="View morning and evening batch timings for Zumba, Yoga, Heavy Gym, and Stepper HIIT at Ivy Studio, Mahima's Trinity Mall, Swej Farm, Jaipur.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23181818'/><text x='16' y='21' font-family='sans-serif' font-weight='700' font-size='14' text-anchor='middle' fill='%2322C55E'>IVY</text></svg>">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Minimized Floating Bottom Center Dock -->
+  <nav class="bottom-dock" aria-label="Palette and Studio Switcher">
+    <a href="index.html" class="dock-pill active-dark" title="Main Portal">🏠 Portal</a>
+    <div class="dock-divider"></div>
+    <a href="page-sage.html" class="dock-pill" title="Sage Edition">🌿 Sage</a>
+    <a href="page-neon.html" class="dock-pill" title="Neon Edition">⚡ Neon</a>
+    <a href="page-crimson.html" class="dock-pill" title="Crimson Edition">🔥 Crimson</a>
+    <div class="dock-divider"></div>
+    <a href="gallery.html" class="dock-pill" title="Gallery">📸 Gallery</a>
+    <a href="schedule.html" class="dock-pill active-dark" style="color: #22C55E;" title="Batches">📅 Batches</a>
+  </nav>
+
+  <!-- Floating Quick Actions: WhatsApp & Instagram -->
+  <div class="floating-social-actions" aria-label="Quick Connect">
+    <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-whatsapp-float" aria-label="Chat on WhatsApp">
+      <i class="ph-bold ph-whatsapp-logo"></i>
+      <span class="tooltip">WhatsApp Studio</span>
+    </a>
+    <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-instagram-float" aria-label="Follow on Instagram">
+      <i class="ph-bold ph-instagram-logo"></i>
+      <span class="tooltip">Instagram @ivy_fitness_studio</span>
+    </a>
+  </div>
+
+  <!-- Floating Navigation Bar -->
+  <header>
+    <nav class="nav-floating" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">IV</div>
+        <span class="body-1" style="font-weight: 700;">IVY STUDIO</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="schedule.html" class="nav-link active">Schedule</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Plans</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button type="button" class="btn-primary btn-sm" data-open-booking>
+          <i class="ph ph-ticket"></i>
+          <span>Free Trial Class</span>
+        </button>
+        <button type="button" id="mobile-menu-toggle" class="btn-secondary btn-sm" style="display: none; padding: 8px 10px;" aria-label="Open mobile menu">
+          <i class="ph ph-list" style="font-size: 20px;"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-nav-panel" style="display: none; position: fixed; inset: 0; background-color: rgba(24, 24, 24, 0.98); z-index: 250; flex-direction: column; padding: var(--spacing-600) var(--spacing-400); justify-content: space-between;">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-600);">
+        <div class="nav-logo">
+          <div class="nav-logo-mark">IV</div>
+          <span class="body-1">IVY STUDIO JAIPUR</span>
+        </div>
+        <button id="mobile-nav-close" style="background: none; border: none; color: #fff; font-size: 28px; cursor: pointer;">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-300);">
+        <a href="index.html" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Studio Home</a>
+        <a href="gallery.html" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Photo & Video Gallery</a>
+        <a href="schedule.html" class="mobile-nav-link title-1" style="color: var(--accent-primary); text-decoration: none;">Batch Schedule</a>
+        <a href="page-sage.html" class="mobile-nav-link title-1" style="color: #789575; text-decoration: none;">🌿 Sage Yoga Edition</a>
+        <a href="page-neon.html" class="mobile-nav-link title-1" style="color: #F5FF00; text-decoration: none;">⚡ Neon Zumba Edition</a>
+        <a href="page-crimson.html" class="mobile-nav-link title-1" style="color: #FFF0DC; text-decoration: none;">🔥 Crimson Iron Edition</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--spacing-200);">
+      <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width: 100%; justify-content: center;">
+        <i class="ph-bold ph-whatsapp-logo" style="color: #25D366;"></i>
+        <span>WhatsApp Studio (+91 88244 59354)</span>
+      </a>
+      <button type="button" class="btn-primary" style="width: 100%; justify-content: center;" data-open-booking>
+        <i class="ph ph-ticket"></i>
+        <span>Book Free Trial Class</span>
+      </button>
+    </div>
+  </div>
+
+  <main id="main-content" style="padding-top: 130px; padding-bottom: var(--spacing-900);">
+    <div class="container">
+      <div style="text-align: center; max-width: 680px; margin: 0 auto var(--spacing-600) auto;">
+        <div style="display: inline-flex; align-items: center; gap: 6px; background-color: var(--surface-primary); border: 1px solid var(--border-primary); padding: 4px 14px; border-radius: var(--radius-full); margin-bottom: var(--spacing-200);">
+          <i class="ph ph-calendar-check" style="color: var(--accent-primary);"></i>
+          <span class="caption-1" style="color: var(--text-primary);">Monday to Saturday • 7 Daily Batches</span>
+        </div>
+        <h1 class="heading-2" style="margin-bottom: var(--spacing-200);">
+          Daily Batch Timetable & Reservations
+        </h1>
+        <p class="body-2" style="color: var(--text-secondary);">
+          Reserve your preferred morning or evening batch at Mahima's Trinity Mall, Swej Farm, Sodala, Jaipur.
+        </p>
+      </div>
+
+      <!-- Schedule Table -->
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 class="heading-4" style="color: var(--accent-primary); margin-bottom: var(--spacing-300);">🌅 Morning Batches</h2>
+        
+        <div class="timetable-row">
+          <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+            <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 700; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+              06:00 AM
+            </div>
+            <div>
+              <h3 class="title-2">Early Bird Zumba & Cardio Blast</h3>
+              <p class="caption-1">Sulochana Sharma • Main Dance Floor</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="06:00 AM Zumba Batch">Reserve Spot</button>
+        </div>
+
+        <div class="timetable-row">
+          <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+            <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 700; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+              07:00 AM
+            </div>
+            <div>
+              <h3 class="title-2">Classical Morning Yoga & Alignment</h3>
+              <p class="caption-1">Certified Yoga Faculty • Asana Practice</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="07:00 AM Yoga Batch">Reserve Spot</button>
+        </div>
+
+        <div class="timetable-row">
+          <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+            <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 700; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+              08:00 AM
+            </div>
+            <div>
+              <h3 class="title-2">High Tempo Zumba & Stepper Drills</h3>
+              <p class="caption-1">Instructor Aditi Jangid • Aerobic Stepper Track</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="08:00 AM Zumba Stepper">Reserve Spot</button>
+        </div>
+
+        <div class="timetable-row" style="margin-bottom: var(--spacing-700);">
+          <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+            <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 700; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+              09:00 AM
+            </div>
+            <div>
+              <h3 class="title-2">Strength Circuit & Functional Sculpt</h3>
+              <p class="caption-1">Gym Floor • Dumbbells & Core Training</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="09:00 AM Strength Circuit">Reserve Spot</button>
+        </div>
+
+        <h2 class="heading-4" style="color: var(--accent-primary); margin-bottom: var(--spacing-300);">🌆 Evening Batches</h2>
+
+        <div class="timetable-row">
+          <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+            <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 700; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+              04:00 PM
+            </div>
+            <div>
+              <h3 class="title-2">Evening Yoga Flow & Mobility Reset</h3>
+              <p class="caption-1">Post Work Relaxation • Lumbar Relief</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="04:00 PM Evening Yoga">Reserve Spot</button>
+        </div>
+
+        <div class="timetable-row">
+          <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+            <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 700; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+              05:00 PM
+            </div>
+            <div>
+              <h3 class="title-2">Power Zumba Party & Dance Cardio</h3>
+              <p class="caption-1">Sulochana Sharma • High Calorie Session</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="05:00 PM Power Zumba">Reserve Spot</button>
+        </div>
+
+        <div class="timetable-row" style="margin-bottom: var(--spacing-700);">
+          <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+            <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 700; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+              06:00 PM
+            </div>
+            <div>
+              <h3 class="title-2">Hardcore Bodybuilding & Heavy Lifts</h3>
+              <p class="caption-1">Gym Floor • Trainer Spotting & Ice Bath Access</p>
+            </div>
+          </div>
+          <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="06:00 PM Heavy Lifts">Reserve Spot</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="padding-bottom: 90px;">
+    <div class="container" style="text-align: center;">
+      <p class="body-1" style="margin-bottom: var(--spacing-100);">IVY STUDIO — DANCE & FITNESS JAIPUR</p>
+      <p class="caption-1" style="color: var(--text-secondary); margin-bottom: var(--spacing-200);">2nd Floor, Mahima's Trinity Mall, Swej Farm, Sodala, Jaipur • WhatsApp +91 88244 59354</p>
+      <p class="caption-2" style="color: var(--text-subtle);">Official Studio Timetable</p>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div id="booking-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button type="button" class="modal-close" data-close-booking><i class="ph ph-x"></i></button>
+      <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase;">Batch Reservation</span>
+      <h3 class="title-1" style="margin-top: var(--spacing-50);">Reserve Your Batch Slot</h3>
+      <p class="caption-1" style="margin-bottom: var(--spacing-300);">Complimentary 1st Class Trial at Trinity Mall</p>
+      
+      <form id="booking-form">
+        <input type="hidden" id="booking-slot-input" value="Schedule Reservation">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="field-name" class="form-input" placeholder="e.g. Rahul Verma" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp Mobile Number *</label>
+          <input type="tel" id="field-phone" class="form-input" placeholder="10-digit number" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="field-email" class="form-input" placeholder="rahul@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Selected Batch *</label>
+          <select id="field-goal" class="form-select" required>
+            <option value="6am">06:00 AM — Morning Zumba</option>
+            <option value="7am">07:00 AM — Morning Yoga</option>
+            <option value="8am">08:00 AM — Zumba Stepper</option>
+            <option value="9am">09:00 AM — Strength Circuit</option>
+            <option value="4pm">04:00 PM — Evening Yoga</option>
+            <option value="5pm">05:00 PM — Evening Power Zumba</option>
+            <option value="6pm">06:00 PM — Heavy Lifts & Gym</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px 14px;">Confirm Reservation</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">
+    <i class="ph-fill ph-check-circle" style="color: var(--accent-primary); font-size: 24px;"></i>
+    <div>
+      <p class="body-1" style="font-size: var(--text-sm);">Slot Reserved</p>
+      <p id="toast-text" class="caption-2" style="color: var(--text-secondary);"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/runner.js"></script>
+</body>
+</html>

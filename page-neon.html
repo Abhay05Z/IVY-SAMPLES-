@@ -80,13 +80,29 @@
 </head>
 <body>
   <!-- Theme Switcher Floating Bar -->
-  <aside class="theme-switcher-bar" aria-label="Palette Switcher">
-    <span style="font-size: 10px; color: #9CA3AF; margin-right: 2px;">Palettes:</span>
-    <a href="page-sage.html" class="theme-pill-btn">🌿 Sage Ivory</a>
-    <a href="page-neon.html" class="theme-pill-btn active-neon">⚡ Neon Cobalt</a>
-    <a href="page-crimson.html" class="theme-pill-btn">🔥 Crimson Noir</a>
-    <a href="index.html" class="theme-pill-btn">🏠 Main Portal</a>
-  </aside>
+    <!-- Minimized Floating Bottom Center Dock -->
+  <nav class="bottom-dock" aria-label="Palette and Studio Switcher">
+    <a href="index.html" class="dock-pill " title="Main Portal">🏠 Portal</a>
+    <div class="dock-divider"></div>
+    <a href="page-sage.html" class="dock-pill " title="Sage Edition">🌿 Sage</a>
+    <a href="page-neon.html" class="dock-pill active-neon" title="Neon Edition">⚡ Neon</a>
+    <a href="page-crimson.html" class="dock-pill " title="Crimson Edition">🔥 Crimson</a>
+    <div class="dock-divider"></div>
+    <a href="gallery.html" class="dock-pill" title="Gallery">📸 Gallery</a>
+    <a href="schedule.html" class="dock-pill" title="Batches">📅 Batches</a>
+  </nav>
+
+  <!-- Floating Quick Actions: WhatsApp & Instagram -->
+  <div class="floating-social-actions" aria-label="Quick Connect">
+    <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-whatsapp-float" aria-label="Chat on WhatsApp">
+      <i class="ph-bold ph-whatsapp-logo"></i>
+      <span class="tooltip">WhatsApp Studio</span>
+    </a>
+    <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-instagram-float" aria-label="Follow on Instagram">
+      <i class="ph-bold ph-instagram-logo"></i>
+      <span class="tooltip">Instagram @ivy_fitness_studio</span>
+    </a>
+  </div>
 
   <header>
     <nav class="nav-floating" style="background-color: rgba(245, 255, 0, 0.92); border-color: #0864E8; color: #0864E8;" aria-label="Main Navigation">

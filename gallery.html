@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo & Video Gallery | Ivy Studio Jaipur</title>
+  <meta name="description" content="Explore live moments, group Zumba batches, yoga sessions, heavy iron gym floor, and ice bath therapy at Ivy Studio, Trinity Mall, Jaipur.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23181818'/><text x='16' y='21' font-family='sans-serif' font-weight='700' font-size='14' text-anchor='middle' fill='%2322C55E'>IVY</text></svg>">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Keyboard accessibility skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Minimized Floating Bottom Center Dock -->
+  <nav class="bottom-dock" aria-label="Palette and Studio Switcher">
+    <a href="index.html" class="dock-pill active-dark" title="Main Portal">🏠 Portal</a>
+    <div class="dock-divider"></div>
+    <a href="page-sage.html" class="dock-pill" title="Sage Edition">🌿 Sage</a>
+    <a href="page-neon.html" class="dock-pill" title="Neon Edition">⚡ Neon</a>
+    <a href="page-crimson.html" class="dock-pill" title="Crimson Edition">🔥 Crimson</a>
+    <div class="dock-divider"></div>
+    <a href="gallery.html" class="dock-pill active-dark" style="color: #22C55E;" title="Gallery">📸 Gallery</a>
+    <a href="schedule.html" class="dock-pill" title="Batches">📅 Batches</a>
+  </nav>
+
+  <!-- Floating Quick Actions: WhatsApp & Instagram at Bottom Right -->
+  <div class="floating-social-actions" aria-label="Quick Connect">
+    <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-whatsapp-float" aria-label="Chat on WhatsApp">
+      <i class="ph-bold ph-whatsapp-logo"></i>
+      <span class="tooltip">WhatsApp Studio</span>
+    </a>
+    <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-instagram-float" aria-label="Follow on Instagram">
+      <i class="ph-bold ph-instagram-logo"></i>
+      <span class="tooltip">Instagram @ivy_fitness_studio</span>
+    </a>
+  </div>
+
+  <!-- Floating Navigation Bar -->
+  <header>
+    <nav class="nav-floating" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">IV</div>
+        <span class="body-1" style="font-weight: 700;">IVY STUDIO</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Plans</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button type="button" class="btn-primary btn-sm" data-open-booking>
+          <i class="ph ph-ticket"></i>
+          <span>Free Trial Class</span>
+        </button>
+        <button type="button" id="mobile-menu-toggle" class="btn-secondary btn-sm" style="display: none; padding: 8px 10px;" aria-label="Open mobile menu">
+          <i class="ph ph-list" style="font-size: 20px;"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-nav-panel" style="display: none; position: fixed; inset: 0; background-color: rgba(24, 24, 24, 0.98); z-index: 250; flex-direction: column; padding: var(--spacing-600) var(--spacing-400); justify-content: space-between;">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-600);">
+        <div class="nav-logo">
+          <div class="nav-logo-mark">IV</div>
+          <span class="body-1">IVY STUDIO JAIPUR</span>
+        </div>
+        <button id="mobile-nav-close" style="background: none; border: none; color: #fff; font-size: 28px; cursor: pointer;">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-300);">
+        <a href="index.html" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Studio Home</a>
+        <a href="gallery.html" class="mobile-nav-link title-1" style="color: var(--accent-primary); text-decoration: none;">Photo & Video Gallery</a>
+        <a href="schedule.html" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Batch Schedule</a>
+        <a href="page-sage.html" class="mobile-nav-link title-1" style="color: #789575; text-decoration: none;">🌿 Sage Yoga Edition</a>
+        <a href="page-neon.html" class="mobile-nav-link title-1" style="color: #F5FF00; text-decoration: none;">⚡ Neon Zumba Edition</a>
+        <a href="page-crimson.html" class="mobile-nav-link title-1" style="color: #FFF0DC; text-decoration: none;">🔥 Crimson Iron Edition</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--spacing-200);">
+      <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width: 100%; justify-content: center;">
+        <i class="ph-bold ph-whatsapp-logo" style="color: #25D366;"></i>
+        <span>WhatsApp Studio (+91 88244 59354)</span>
+      </a>
+      <button type="button" class="btn-primary" style="width: 100%; justify-content: center;" data-open-booking>
+        <i class="ph ph-ticket"></i>
+        <span>Book Free Trial Class</span>
+      </button>
+    </div>
+  </div>
+
+  <main id="main-content" style="padding-top: 130px; padding-bottom: var(--spacing-900);">
+    <div class="container">
+      <!-- Page Header -->
+      <div style="text-align: center; max-width: 680px; margin: 0 auto var(--spacing-600) auto;">
+        <div style="display: inline-flex; align-items: center; gap: 6px; background-color: var(--surface-primary); border: 1px solid var(--border-primary); padding: 4px 14px; border-radius: var(--radius-full); margin-bottom: var(--spacing-200);">
+          <i class="ph ph-images" style="color: var(--accent-primary);"></i>
+          <span class="caption-1" style="color: var(--text-primary);">Mahima's Trinity Mall, Swej Farm • Studio Visuals</span>
+        </div>
+        <h1 class="heading-2" style="margin-bottom: var(--spacing-200);">
+          Studio Gallery & Moments in Motion
+        </h1>
+        <p class="body-2" style="color: var(--text-secondary);">
+          Experience the vibrant energy of our Zumba routines, the tranquility of certified yoga flows, heavy barbell lifting, and cold plunge immersion.
+        </p>
+      </div>
+
+      <!-- INTERACTIVE PHOTO SLIDER GALLERY -->
+      <section style="margin-bottom: var(--spacing-800);">
+        <div id="ivy-photo-slider"></div>
+      </section>
+
+      <!-- Category Filter Pills -->
+      <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: var(--spacing-600);">
+        <button type="button" class="btn-secondary btn-sm" style="border-color: var(--accent-primary); color: var(--accent-primary);">All Moments</button>
+        <button type="button" class="btn-secondary btn-sm">Zumba Dance</button>
+        <button type="button" class="btn-secondary btn-sm">Classical Yoga</button>
+        <button type="button" class="btn-secondary btn-sm">Heavy Gym</button>
+        <button type="button" class="btn-secondary btn-sm">Ice Bath Recovery</button>
+        <button type="button" class="btn-secondary btn-sm">Events & Garba</button>
+      </div>
+
+      <!-- Photo Grid Showcase (One-By-One Scroll Cascades) -->
+      <div class="scroll-cascade-container" style="margin-bottom: var(--spacing-800);">
+        <div class="card-flat scroll-cascade-item hover-lift" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/dance_group.jpg" alt="Zumba group choreography" style="width: 100%; height: 260px; object-fit: cover;">
+          <div style="padding: var(--spacing-300);">
+            <span class="caption-3" style="color: var(--accent-primary);">Zumba Batch</span>
+            <h3 class="title-2" style="margin-top: 4px;">Energy & Rhythm Community</h3>
+            <p class="caption-2" style="margin-top: 4px;">Morning 6:00 AM & 8:00 AM group dance session.</p>
+          </div>
+        </div>
+
+        <div class="card-flat scroll-cascade-item hover-lift" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/yoga_asana.jpg" alt="Yoga asana practice" style="width: 100%; height: 260px; object-fit: cover;">
+          <div style="padding: var(--spacing-300);">
+            <span class="caption-3" style="color: var(--accent-primary);">Classical Yoga</span>
+            <h3 class="title-2" style="margin-top: 4px;">Morning Spinal Alignment</h3>
+            <p class="caption-2" style="margin-top: 4px;">Mindful flexibility and pranayama with certified faculty.</p>
+          </div>
+        </div>
+
+        <div class="card-flat scroll-cascade-item hover-lift" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/strength_training.jpg" alt="Gym strength training" style="width: 100%; height: 260px; object-fit: cover;">
+          <div style="padding: var(--spacing-300);">
+            <span class="caption-3" style="color: var(--accent-primary);">Heavy Iron</span>
+            <h3 class="title-2" style="margin-top: 4px;">Olympic Barbell Platforms</h3>
+            <p class="caption-2" style="margin-top: 4px;">Squats, deadlifts, and heavy dumbbell stations.</p>
+          </div>
+        </div>
+
+        <div class="card-flat scroll-cascade-item hover-lift" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/ice_bath_recovery.jpg" alt="Cold plunge therapy" style="width: 100%; height: 260px; object-fit: cover;">
+          <div style="padding: var(--spacing-300);">
+            <span class="caption-3" style="color: var(--accent-primary);">Recovery Suite</span>
+            <h3 class="title-2" style="margin-top: 4px;">Chilled Ice Bath Immersion</h3>
+            <p class="caption-2" style="margin-top: 4px;">Flushing lactic acid and boosting athletic recovery.</p>
+          </div>
+        </div>
+
+        <div class="card-flat scroll-cascade-item hover-lift" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/kettlebell_conditioning.jpg" alt="Stepper HIIT drill" style="width: 100%; height: 260px; object-fit: cover;">
+          <div style="padding: var(--spacing-300);">
+            <span class="caption-3" style="color: var(--accent-primary);">Functional HIIT</span>
+            <h3 class="title-2" style="margin-top: 4px;">Stepper & Stability Ball Drills</h3>
+            <p class="caption-2" style="margin-top: 4px;">Core balance and high cadence calorie torching.</p>
+          </div>
+        </div>
+
+        <div class="card-flat scroll-cascade-item hover-lift" style="padding: 0; overflow: hidden;">
+          <img src="assets/images/studio_ambiance.jpg" alt="Trinity mall studio tour" style="width: 100%; height: 260px; object-fit: cover;">
+          <div style="padding: var(--spacing-300);">
+            <span class="caption-3" style="color: var(--accent-primary);">Trinity Mall</span>
+            <h3 class="title-2" style="margin-top: 4px;">2nd Floor Facility Ambiance</h3>
+            <p class="caption-2" style="margin-top: 4px;">Mirror studio, wooden dance floor, and rubber gym pads.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Studio Invite Banner -->
+      <div class="card-flat" style="text-align: center; padding: var(--spacing-600); background-color: var(--surface-subtle); border-color: var(--accent-primary);">
+        <h2 class="heading-3" style="margin-bottom: var(--spacing-100);">Ready to be in our next gallery capture?</h2>
+        <p class="body-2" style="color: var(--text-secondary); max-width: 540px; margin: 0 auto var(--spacing-300) auto;">
+          Book a complimentary 1st class trial at Mahima's Trinity Mall, Swej Farm, Sodala, Jaipur.
+        </p>
+        <button type="button" class="btn-primary" data-open-booking>
+          <i class="ph ph-ticket"></i>
+          <span>Claim Free Trial Pass</span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="padding-bottom: 90px;">
+    <div class="container" style="text-align: center;">
+      <p class="body-1" style="margin-bottom: var(--spacing-100);">IVY STUDIO — DANCE & FITNESS JAIPUR</p>
+      <p class="caption-1" style="color: var(--text-secondary); margin-bottom: var(--spacing-200);">2nd Floor, Mahima's Trinity Mall, Swej Farm, Sodala, Jaipur • WhatsApp +91 88244 59354</p>
+      <p class="caption-2" style="color: var(--text-subtle);">Follow our daily reels on Instagram: @ivy_fitness_studio</p>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div id="booking-modal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button type="button" class="modal-close" data-close-booking><i class="ph ph-x"></i></button>
+      <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase;">Jaipur Studio Trial</span>
+      <h3 class="title-1" style="margin-top: var(--spacing-50);">Book Free Trial Class</h3>
+      <p class="caption-1" style="margin-bottom: var(--spacing-300);">Trinity Mall Studio • Complimentary 1st Class</p>
+      
+      <form id="booking-form">
+        <input type="hidden" id="booking-slot-input" value="Gallery Visitor Trial">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" id="field-name" class="form-input" placeholder="e.g. Priya Sharma" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp Mobile Number *</label>
+          <input type="tel" id="field-phone" class="form-input" placeholder="10-digit number" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" id="field-email" class="form-input" placeholder="priya@example.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Workout Interest *</label>
+          <select id="field-goal" class="form-select" required>
+            <option value="zumba">Zumba Dance Fitness</option>
+            <option value="yoga">Classical & Power Yoga</option>
+            <option value="gym">Heavy Gym & Weight Lifting</option>
+            <option value="recovery">Ice Bath Cryo Recovery</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px 14px;">Confirm Free Pass</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">
+    <i class="ph-fill ph-check-circle" style="color: var(--accent-primary); font-size: 24px;"></i>
+    <div>
+      <p class="body-1" style="font-size: var(--text-sm);">Trial Booked Successfully</p>
+      <p id="toast-text" class="caption-2" style="color: var(--text-secondary);"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/runner.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>

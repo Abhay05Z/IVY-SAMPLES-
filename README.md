@@ -60,6 +60,8 @@ This project includes **three distinct color combination editions** based on mod
 
 ```
 ├── index.html                   # Master studio landing page & portal
+├── gallery.html                 # Dedicated Photo & Video Slider Gallery page
+├── schedule.html                # Dedicated Batch Timetable & Reservation page
 ├── page-sage.html               # Pale Sage Ivory & Muted Forest Sage edition
 ├── page-neon.html               # Vibrant Neon Yellow & Electric Cobalt Blue edition
 ├── page-crimson.html            # Deep Crimson Burgundy & Warm Ivory Cream edition
@@ -69,6 +71,7 @@ This project includes **three distinct color combination editions** based on mod
 │   ├── css/
 │   │   └── styles.css           # Tokenized visual design system & animations
 │   ├── js/
+│   │   ├── gallery.js           # Photo slider carousel & lightbox
 │   │   ├── main.js              # Booking modal, timetable switcher & video tour
 │   │   └── runner.js            # Mouse-following runner & scroll cascade engine
 │   └── images/                  # High-resolution curated studio photography

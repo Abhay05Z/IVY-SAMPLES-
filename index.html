@@ -25,13 +25,29 @@
 </head>
 <body>
   <!-- Theme Switcher Floating Bar -->
-  <aside class="theme-switcher-bar" aria-label="Palette Switcher">
-    <span style="font-size: 10px; color: #9CA3AF; margin-right: 2px;">Palettes:</span>
-    <a href="page-sage.html" class="theme-pill-btn">🌿 Sage Ivory</a>
-    <a href="page-neon.html" class="theme-pill-btn">⚡ Neon Cobalt</a>
-    <a href="page-crimson.html" class="theme-pill-btn">🔥 Crimson Noir</a>
-    <a href="index.html" class="theme-pill-btn active-dark">🏠 Main Portal</a>
-  </aside>
+    <!-- Minimized Floating Bottom Center Dock -->
+  <nav class="bottom-dock" aria-label="Palette and Studio Switcher">
+    <a href="index.html" class="dock-pill active-dark" title="Main Portal">🏠 Portal</a>
+    <div class="dock-divider"></div>
+    <a href="page-sage.html" class="dock-pill " title="Sage Edition">🌿 Sage</a>
+    <a href="page-neon.html" class="dock-pill " title="Neon Edition">⚡ Neon</a>
+    <a href="page-crimson.html" class="dock-pill " title="Crimson Edition">🔥 Crimson</a>
+    <div class="dock-divider"></div>
+    <a href="gallery.html" class="dock-pill" title="Gallery">📸 Gallery</a>
+    <a href="schedule.html" class="dock-pill" title="Batches">📅 Batches</a>
+  </nav>
+
+  <!-- Floating Quick Actions: WhatsApp & Instagram -->
+  <div class="floating-social-actions" aria-label="Quick Connect">
+    <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-whatsapp-float" aria-label="Chat on WhatsApp">
+      <i class="ph-bold ph-whatsapp-logo"></i>
+      <span class="tooltip">WhatsApp Studio</span>
+    </a>
+    <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" class="floating-action-btn btn-instagram-float" aria-label="Follow on Instagram">
+      <i class="ph-bold ph-instagram-logo"></i>
+      <span class="tooltip">Instagram @ivy_fitness_studio</span>
+    </a>
+  </div>
 
   <!-- Keyboard accessibility skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -174,6 +190,31 @@
     </section>
 
     <!-- SECTION 2: THE STUDIO DIFFERENCE (Problem to Solution Matrix per A2) -->
+        <!-- SECTION: INTERACTIVE STUDIO PHOTO SLIDER -->
+    <section class="section" id="gallery-slider-section">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--spacing-300); margin-bottom: var(--spacing-600);">
+          <div style="max-width: 680px;">
+            <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Visual Studio Tour</span>
+            <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+              Moments from Ivy Studio
+            </h2>
+            <p class="body-3" style="color: var(--text-secondary);">
+              Swipe through our high-energy Zumba dance floors, certified yoga asanas, heavy barbell platforms, and cold plunge suites.
+            </p>
+          </div>
+          <div>
+            <a href="gallery.html" class="btn-secondary">
+              <i class="ph ph-images"></i>
+              <span>View Full Gallery</span>
+            </a>
+          </div>
+        </div>
+
+        <div id="ivy-photo-slider"></div>
+      </div>
+    </section>
+
     <section class="section" id="matrix">
       <div class="container">
         <div style="max-width: 680px; margin-bottom: var(--spacing-600);">
@@ -1087,5 +1128,6 @@
 
   <script src="assets/js/main.js"></script>
   <script src="assets/js/runner.js"></script>
+  <script src="assets/js/gallery.js"></script>
 </body>
 </html>
