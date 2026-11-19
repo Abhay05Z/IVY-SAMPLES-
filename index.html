@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivy Studio — Dance & Fitness | Swej Farm, Sodala, Jaipur</title>
+  <meta name="description" content="Ivy Studio is Jaipur's premier dance and fitness destination at Mahima's Trinity Mall, Swej Farm. Offering licensed Zumba, certified Yoga, heavy gym workouts, and ice bath recovery.">
+  <meta name="keywords" content="Ivy Studio Jaipur, Zumba Swej Farm, Yoga Sodala, gym Trinity Mall, dance studio Jaipur, fitness center Sodala, Sulochana Sharma">
+
+  <!-- Open Graph / Social Sharing Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ivy Studio — Dance & Fitness | Jaipur">
+  <meta property="og:description" content="High energy Zumba, soulful Yoga, hardcore gym workouts, and ice bath therapy at Mahima's Trinity Mall, Swej Farm, Jaipur.">
+  <meta property="og:image" content="assets/images/hero_gym.jpg">
+  <meta property="og:url" content="https://www.instagram.com/ivy_fitness_studio/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%23181818'/><text x='16' y='21' font-family='sans-serif' font-weight='700' font-size='14' text-anchor='middle' fill='%2322C55E'>IVY</text></svg>">
+
+  <!-- Phosphor Icons via CDN (Approved per Skill B6) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Theme Switcher Floating Bar -->
+  <aside class="theme-switcher-bar" aria-label="Palette Switcher">
+    <span style="font-size: 10px; color: #9CA3AF; margin-right: 2px;">Palettes:</span>
+    <a href="page-sage.html" class="theme-pill-btn">🌿 Sage Ivory</a>
+    <a href="page-neon.html" class="theme-pill-btn">⚡ Neon Cobalt</a>
+    <a href="page-crimson.html" class="theme-pill-btn">🔥 Crimson Noir</a>
+    <a href="index.html" class="theme-pill-btn active-dark">🏠 Main Portal</a>
+  </aside>
+
+  <!-- Keyboard accessibility skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Floating Navigation Bar per B7 -->
+  <header>
+    <nav class="nav-floating" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">IV</div>
+        <span class="body-1" style="letter-spacing: -0.01em;">IVY STUDIO</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#programs" class="nav-link">Disciplines</a></li>
+        <li><a href="#matrix" class="nav-link">The Studio</a></li>
+        <li><a href="#timetable" class="nav-link">Batches</a></li>
+        <li><a href="#instructors" class="nav-link">Instructors</a></li>
+        <li><a href="#pricing" class="nav-link">Memberships</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div style="display: flex; align-items: center; gap: var(--spacing-100);">
+        <button type="button" class="btn-primary btn-sm" data-open-booking>
+          <i class="ph ph-ticket"></i>
+          <span>Free Trial Class</span>
+        </button>
+        <button type="button" id="mobile-menu-toggle" class="btn-secondary btn-sm" style="display: none; padding: 8px 10px;" aria-label="Open mobile menu">
+          <i class="ph ph-list" style="font-size: 20px;"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-nav-panel" style="display: none; position: fixed; inset: 0; background-color: rgba(24, 24, 24, 0.98); z-index: 250; flex-direction: column; padding: var(--spacing-600) var(--spacing-400); justify-content: space-between;">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-600);">
+        <div class="nav-logo">
+          <div class="nav-logo-mark">IV</div>
+          <span class="body-1">IVY STUDIO JAIPUR</span>
+        </div>
+        <button id="mobile-nav-close" style="background: none; border: none; color: #fff; font-size: 28px; cursor: pointer;">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-300);">
+        <a href="#programs" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Disciplines</a>
+        <a href="#matrix" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">The Studio</a>
+        <a href="#timetable" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Daily Batches</a>
+        <a href="#instructors" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Instructors</a>
+        <a href="#pricing" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Membership Plans</a>
+        <a href="#faq" class="mobile-nav-link title-1" style="color: var(--text-primary); text-decoration: none;">Questions</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--spacing-200);">
+      <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width: 100%; justify-content: center;">
+        <i class="ph ph-whatsapp-logo"></i>
+        <span>WhatsApp Studio (+91 88244 59354)</span>
+      </a>
+      <button type="button" class="btn-primary" style="width: 100%; justify-content: center;" data-open-booking>
+        <i class="ph ph-ticket"></i>
+        <span>Book Free Trial Class</span>
+      </button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- SECTION 1: HERO (Above the fold per A2) -->
+    <section class="section-hero">
+      <div class="container">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: var(--spacing-600);">
+          
+          <!-- One Proof Signal (Location & Instagram Community Badge) -->
+          <div style="display: inline-flex; align-items: center; gap: var(--spacing-75); background-color: var(--surface-primary); border: 1px solid var(--border-primary); padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: var(--spacing-300);">
+            <i class="ph ph-map-pin" style="color: var(--accent-primary);"></i>
+            <span class="caption-1" style="color: var(--text-primary);">Mahima's Trinity Mall, Swej Farm, Sodala, Jaipur</span>
+            <span class="caption-2">• 2,000+ Community</span>
+          </div>
+
+          <!-- Hero Headline (Outcome + Audience, no periods, max width 680px per B5) -->
+          <h1 class="hero-headline">
+            Energize your body through dance<br>
+            strength workouts and mindful yoga
+          </h1>
+
+          <!-- Hero Subheadline (How and specificity, max width 680px) -->
+          <p class="hero-subhead">
+            Licensed Zumba sessions, certified Yoga classes, heavy gym strength training, and cold plunge recovery. Capped batches guided by founder Sulochana Sharma in the heart of Jaipur.
+          </p>
+
+          <!-- Primary CTA & Secondary Action -->
+          <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-200); justify-content: center; align-items: center;">
+            <button type="button" class="btn-primary" data-open-booking>
+              <i class="ph ph-calendar-check"></i>
+              <span>Book Free Trial Class</span>
+            </button>
+            <button type="button" class="btn-secondary" data-open-reel data-reel-index="0">
+              <i class="ph ph-play-circle"></i>
+              <span>Watch Studio Reel</span>
+            </button>
+          </div>
+
+          <div style="margin-top: var(--spacing-200); display: flex; align-items: center; gap: var(--spacing-200); color: var(--text-subtle);">
+            <span class="caption-2"><i class="ph ph-check-circle" style="color: var(--accent-primary); vertical-align: middle;"></i> Morning and evening batches</span>
+            <span class="caption-2">•</span>
+            <span class="caption-2"><i class="ph ph-check-circle" style="color: var(--accent-primary); vertical-align: middle;"></i> Free diet and fitness screen</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual (Real Studio Visual Card) -->
+        <div class="card-flat" style="padding: var(--spacing-100); overflow: hidden;">
+          <div style="position: relative; width: 100%; height: 500px; border-radius: var(--radius-12); overflow: hidden;">
+            <img src="assets/images/dance_group.jpg" alt="Ivy Studio Jaipur high energy group Zumba and dance fitness batch" style="width: 100%; height: 100%; object-fit: cover;">
+            
+            <!-- Live studio badge overlay -->
+            <div style="position: absolute; bottom: var(--spacing-300); left: var(--spacing-300); background-color: rgba(24, 24, 24, 0.92); border: 1px solid var(--border-primary); padding: var(--spacing-200); border-radius: var(--radius-12); backdrop-filter: blur(12px); display: flex; gap: var(--spacing-400);">
+              <div>
+                <span class="caption-2">Facility Floor</span>
+                <p class="body-1" style="color: var(--accent-primary);">2nd Floor Trinity Mall</p>
+              </div>
+              <div style="width: 1px; background-color: var(--border-primary);"></div>
+              <div>
+                <span class="caption-2">Core Disciplines</span>
+                <p class="body-1">Zumba • Yoga • Gym</p>
+              </div>
+              <div style="width: 1px; background-color: var(--border-primary);"></div>
+              <div>
+                <span class="caption-2">Daily Slots</span>
+                <p class="body-1">7 Batches Daily</p>
+              </div>
+            </div>
+
+            <button type="button" class="btn-secondary" data-open-reel data-reel-index="0" style="position: absolute; top: var(--spacing-300); right: var(--spacing-300); background-color: rgba(24, 24, 24, 0.85); backdrop-filter: blur(8px);">
+              <i class="ph ph-video-camera"></i>
+              <span>Studio Video Tour</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE STUDIO DIFFERENCE (Problem to Solution Matrix per A2) -->
+    <section class="section" id="matrix">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: var(--spacing-600);">
+          <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">The Ivy Studio Experience</span>
+          <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+            Tired of boring gyms and monotonous workouts?
+          </h2>
+          <p class="body-3" style="color: var(--text-secondary);">
+            Standard gyms force you onto lonely treadmills with zero enthusiasm. Ivy Studio combines calorie burning dance music, mindful yogic alignment, and heavy lifting under one vibrant roof.
+          </p>
+        </div>
+
+        <div class="matrix-grid">
+          <!-- Problem Card -->
+          <div class="matrix-card-problem">
+            <div style="display: flex; align-items: center; gap: var(--spacing-100); margin-bottom: var(--spacing-300); color: #EF4444;">
+              <i class="ph-bold ph-x-circle" style="font-size: 24px;"></i>
+              <h3 class="title-1" style="color: #EF4444;">Conventional Commercial Gyms</h3>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-200);">
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-x" style="color: #EF4444; margin-top: 3px;"></i>
+                <span class="body-3">Dull cardio machines with zero group energy and quick burnout</span>
+              </li>
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-x" style="color: #EF4444; margin-top: 3px;"></i>
+                <span class="body-3">Floor trainers who ignore your technique and form corrections</span>
+              </li>
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-x" style="color: #EF4444; margin-top: 3px;"></i>
+                <span class="body-3">No dedicated recovery or mobility space for tight joints and muscles</span>
+              </li>
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-x" style="color: #EF4444; margin-top: 3px;"></i>
+                <span class="body-3">Expensive locked contracts with zero personal diet guidance</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Solution Card -->
+          <div class="matrix-card-solution">
+            <div style="display: flex; align-items: center; gap: var(--spacing-100); margin-bottom: var(--spacing-300); color: var(--accent-primary);">
+              <i class="ph-bold ph-check-circle" style="font-size: 24px;"></i>
+              <h3 class="title-1" style="color: var(--accent-primary);">Ivy Studio Dance & Fitness</h3>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-200);">
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-check" style="color: var(--accent-primary); margin-top: 3px;"></i>
+                <span class="body-2">Electrifying Zumba and Bachata beats burning 600 calories per session</span>
+              </li>
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-check" style="color: var(--accent-primary); margin-top: 3px;"></i>
+                <span class="body-2">Certified trainers coaching every lift, squat, and yoga asana</span>
+              </li>
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-check" style="color: var(--accent-primary); margin-top: 3px;"></i>
+                <span class="body-2">Dedicated ice bath therapy to rapidly eliminate soreness and fatigue</span>
+              </li>
+              <li style="display: flex; gap: var(--spacing-100); align-items: flex-start;">
+                <i class="ph ph-check" style="color: var(--accent-primary); margin-top: 3px;"></i>
+                <span class="body-2">Transparent plans from ₹4,000 with custom nutrition and fitness checks</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MANDATORY TAGLINE REVEAL (Rule B11) -->
+    <section class="tagline-section" aria-label="Studio Manifesto">
+      <div class="tagline-container">
+        <div id="tagline-reveal-text" class="tagline-text">
+          <span class="tagline-word">Most</span>
+          <span class="tagline-word">gyms</span>
+          <span class="tagline-word">offer</span>
+          <span class="tagline-word">monotonous</span>
+          <span class="tagline-word">treadmills</span>
+          <span class="tagline-word">and</span>
+          <span class="tagline-word">isolated</span>
+          <span class="tagline-word">machines.</span>
+          <br>
+          <span class="tagline-word">Ivy</span>
+          <span class="tagline-word">unites</span>
+          <span class="tagline-word">energetic</span>
+          <span class="tagline-word">dance</span>
+          <span class="tagline-word">rhythms</span>
+          <span class="tagline-word">with</span>
+          <span class="tagline-word">mindful</span>
+          <span class="tagline-word">yoga</span>
+          <span class="tagline-word">and</span>
+          <span class="tagline-word">strength</span>
+          <span class="tagline-word">in</span>
+          <span class="tagline-word">one</span>
+          <span class="tagline-word">vibrant</span>
+          <span class="tagline-word">studio.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: OUTCOME-DRIVEN BENEFITS (Per A2 & A5) -->
+    <section class="section" id="benefits">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: var(--spacing-600);">
+          <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Real Member Results</span>
+          <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+            Four physical outcomes from our holistic routines
+          </h2>
+          <p class="body-3" style="color: var(--text-secondary);">
+            Every batch at Trinity Mall is crafted to build stamina, sculpt muscle tone, and improve mental peace.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--spacing-300);">
+          <!-- Benefit 1 -->
+          <div class="card-flat">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-8); background-color: var(--surface-secondary); display: flex; align-items: center; justify-content: center; color: var(--accent-primary); font-size: 24px; margin-bottom: var(--spacing-300);">
+              <i class="ph ph-fire"></i>
+            </div>
+            <h3 class="title-2" style="margin-bottom: var(--spacing-100);">High calorie fat burn</h3>
+            <p class="body-3" style="color: var(--text-secondary);">
+              <strong>Licensed Zumba choreography</strong> and stepper drills torch up to 700 calories per session while boosting coordination.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="card-flat">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-8); background-color: var(--surface-secondary); display: flex; align-items: center; justify-content: center; color: var(--accent-primary); font-size: 24px; margin-bottom: var(--spacing-300);">
+              <i class="ph ph-flower-lotus"></i>
+            </div>
+            <h3 class="title-2" style="margin-bottom: var(--spacing-100);">Spinal flexibility & calm</h3>
+            <p class="body-3" style="color: var(--text-secondary);">
+              <strong>Certified Yoga instruction</strong> releases spinal stiffness, corrects desk posture, and calms breathing through guided pranayama.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="card-flat">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-8); background-color: var(--surface-secondary); display: flex; align-items: center; justify-content: center; color: var(--accent-primary); font-size: 24px; margin-bottom: var(--spacing-300);">
+              <i class="ph ph-barbell"></i>
+            </div>
+            <h3 class="title-2" style="margin-bottom: var(--spacing-100);">Lean muscle hypertrophy</h3>
+            <p class="body-3" style="color: var(--text-secondary);">
+              <strong>Heavy gym weights and cable stacks</strong> sculpt lean muscular definition with trainer-guided form on every set.
+            </p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="card-flat">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-8); background-color: var(--surface-secondary); display: flex; align-items: center; justify-content: center; color: var(--accent-primary); font-size: 24px; margin-bottom: var(--spacing-300);">
+              <i class="ph ph-snowflake"></i>
+            </div>
+            <h3 class="title-2" style="margin-bottom: var(--spacing-100);">Ice bath cold recovery</h3>
+            <p class="body-3" style="color: var(--text-secondary);">
+              <strong>Cold plunge immersion therapy</strong> rapidly flushes lactic acid, reduces muscle soreness, and accelerates workout recovery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SIGNATURE STUDIO DISCIPLINES -->
+    <section class="section" id="programs">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--spacing-300); margin-bottom: var(--spacing-600);">
+          <div style="max-width: 680px;">
+            <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Curated Offerings</span>
+            <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+              Signature disciplines at Ivy Studio
+            </h2>
+            <p class="body-3" style="color: var(--text-secondary);">
+              From daily morning Zumba cardio to evening power lifting, pick the track that fits your lifestyle.
+            </p>
+          </div>
+          <div>
+            <button type="button" class="btn-primary" data-open-booking data-slot="General Trial Batch">
+              <i class="ph ph-calendar-plus"></i>
+              <span>Book Your First Class</span>
+            </button>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-400);">
+          <!-- Discipline 1: Zumba -->
+          <div class="card-flat" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 220px; width: 100%; position: relative;">
+              <img src="assets/images/zumba_fitness.jpg" alt="Licensed Zumba dance fitness batch at Ivy Studio Jaipur" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="caption-3" style="position: absolute; top: var(--spacing-200); left: var(--spacing-200); background-color: rgba(24,24,24,0.9); padding: 4px 8px; border-radius: var(--radius-4); color: var(--accent-primary); border: 1px solid var(--border-primary);">
+                Licensed Zumba
+              </span>
+            </div>
+            <div style="padding: var(--spacing-400); flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 class="title-1" style="margin-bottom: var(--spacing-75);">Zumba Dance Fitness</h3>
+                <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+                  High energy Latin rhythms, Bollywood grooves, and cardiovascular endurance led by founder Sulochana Sharma. Suitable for all fitness levels.
+                </p>
+                <div style="display: flex; gap: var(--spacing-200); margin-bottom: var(--spacing-300); color: var(--text-subtle);">
+                  <span class="caption-2"><i class="ph ph-users"></i> Group Energy</span>
+                  <span class="caption-2">•</span>
+                  <span class="caption-2"><i class="ph ph-clock"></i> 60 Mins</span>
+                </div>
+              </div>
+              <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" data-open-booking data-slot="Zumba Dance Trial">
+                Book Zumba Trial
+              </button>
+            </div>
+          </div>
+
+          <!-- Discipline 2: Yoga -->
+          <div class="card-flat" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 220px; width: 100%; position: relative;">
+              <img src="assets/images/yoga_asana.jpg" alt="Certified Yoga teacher guiding morning asana and flexibility" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="caption-3" style="position: absolute; top: var(--spacing-200); left: var(--spacing-200); background-color: rgba(24,24,24,0.9); padding: 4px 8px; border-radius: var(--radius-4); color: var(--accent-primary); border: 1px solid var(--border-primary);">
+                Certified Yoga
+              </span>
+            </div>
+            <div style="padding: var(--spacing-400); flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 class="title-1" style="margin-bottom: var(--spacing-75);">Classical & Power Yoga</h3>
+                <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+                  Spinal alignment, hip opening, core strengthening, and pranayama. Designed to relieve physical tension and build long term mobility.
+                </p>
+                <div style="display: flex; gap: var(--spacing-200); margin-bottom: var(--spacing-300); color: var(--text-subtle);">
+                  <span class="caption-2"><i class="ph ph-heartbeat"></i> Postural Rehab</span>
+                  <span class="caption-2">•</span>
+                  <span class="caption-2"><i class="ph ph-clock"></i> 60 Mins</span>
+                </div>
+              </div>
+              <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" data-open-booking data-slot="Yoga Session Trial">
+                Book Yoga Trial
+              </button>
+            </div>
+          </div>
+
+          <!-- Discipline 3: Hardcore Gym -->
+          <div class="card-flat" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 220px; width: 100%; position: relative;">
+              <img src="assets/images/strength_training.jpg" alt="Ivy Studio gym strength floor with barbells and dumbbells" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="caption-3" style="position: absolute; top: var(--spacing-200); left: var(--spacing-200); background-color: rgba(24,24,24,0.9); padding: 4px 8px; border-radius: var(--radius-4); color: var(--accent-primary); border: 1px solid var(--border-primary);">
+                Heavy Gym
+              </span>
+            </div>
+            <div style="padding: var(--spacing-400); flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 class="title-1" style="margin-bottom: var(--spacing-75);">Hardcore Gym & Strength</h3>
+                <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+                  Dumbbells, Olympic barbells, multi-functional cable stacks, and cardio gear. Certified floor trainers assist with weight selection and form.
+                </p>
+                <div style="display: flex; gap: var(--spacing-200); margin-bottom: var(--spacing-300); color: var(--text-subtle);">
+                  <span class="caption-2"><i class="ph ph-barbell"></i> Unlimited Access</span>
+                  <span class="caption-2">•</span>
+                  <span class="caption-2"><i class="ph ph-clock"></i> Open Slots</span>
+                </div>
+              </div>
+              <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" data-open-booking data-slot="Gym Strength Trial">
+                Book Gym Trial
+              </button>
+            </div>
+          </div>
+
+          <!-- Discipline 4: Cold Plunge & Functional -->
+          <div class="card-flat" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 220px; width: 100%; position: relative;">
+              <img src="assets/images/ice_bath_recovery.jpg" alt="Ice bath recovery therapy and cold plunge tub" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="caption-3" style="position: absolute; top: var(--spacing-200); left: var(--spacing-200); background-color: rgba(24,24,24,0.9); padding: 4px 8px; border-radius: var(--radius-4); color: var(--accent-primary); border: 1px solid var(--border-primary);">
+                Recovery & HIIT
+              </span>
+            </div>
+            <div style="padding: var(--spacing-400); flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 class="title-1" style="margin-bottom: var(--spacing-75);">Cold Plunge & Stepper HIIT</h3>
+                <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+                  Functional medicine ball and stepper drills paired with therapeutic ice baths for athletic recovery, reducing inflammation and soreness.
+                </p>
+                <div style="display: flex; gap: var(--spacing-200); margin-bottom: var(--spacing-300); color: var(--text-subtle);">
+                  <span class="caption-2"><i class="ph ph-snowflake"></i> Cold Immersion</span>
+                  <span class="caption-2">•</span>
+                  <span class="caption-2"><i class="ph ph-clock"></i> 45 Mins</span>
+                </div>
+              </div>
+              <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" data-open-booking data-slot="Recovery & HIIT Trial">
+                Book Recovery Trial
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: DAILY BATCH TIMETABLE (Real Schedule from Instagram) -->
+    <section class="section" id="timetable">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: var(--spacing-600);">
+          <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Weekly Schedule</span>
+          <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+            Daily batch timings (Monday to Saturday)
+          </h2>
+          <p class="body-3" style="color: var(--text-secondary);">
+            Choose from four morning slots and three evening slots crafted to fit student and office schedules.
+          </p>
+        </div>
+
+        <!-- Schedule list items -->
+        <div id="timetable-list">
+          <div class="timetable-row">
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 600; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+                06:00 AM
+              </div>
+              <div>
+                <h4 class="title-2">Early Bird Zumba & Cardio Blast</h4>
+                <p class="caption-1">Founder Sulochana Sharma • Main Dance Floor • Swej Farm</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <span class="caption-3" style="color: #22C55E;"><i class="ph-fill ph-circle"></i> Open Batch</span>
+              <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="06:00 AM Zumba Batch">Reserve Seat</button>
+            </div>
+          </div>
+
+          <div class="timetable-row">
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 600; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+                07:00 AM
+              </div>
+              <div>
+                <h4 class="title-2">Classical Morning Yoga & Asana Alignment</h4>
+                <p class="caption-1">Certified Yoga Faculty • Mirror Studio • Flexibility & Core</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <span class="caption-3" style="color: #22C55E;"><i class="ph-fill ph-circle"></i> Open Batch</span>
+              <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="07:00 AM Yoga Batch">Reserve Seat</button>
+            </div>
+          </div>
+
+          <div class="timetable-row">
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 600; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+                08:00 AM
+              </div>
+              <div>
+                <h4 class="title-2">High Energy Zumba Rhythm & Stepper Drill</h4>
+                <p class="caption-1">Instructor Aditi Jangid • Aerobic Stepper Track</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <span class="caption-3" style="color: #EAB308;"><i class="ph-fill ph-circle"></i> Limited Slots</span>
+              <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="08:00 AM Zumba Stepper">Reserve Seat</button>
+            </div>
+          </div>
+
+          <div class="timetable-row">
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 600; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+                09:00 AM
+              </div>
+              <div>
+                <h4 class="title-2">Strength Circuit & Functional Body Sculpt</h4>
+                <p class="caption-1">Gym Floor • Dumbbell Complexes & Core Conditioning</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <span class="caption-3" style="color: #22C55E;"><i class="ph-fill ph-circle"></i> Open Batch</span>
+              <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="09:00 AM Strength Circuit">Reserve Seat</button>
+            </div>
+          </div>
+
+          <div class="timetable-row">
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 600; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+                04:00 PM
+              </div>
+              <div>
+                <h4 class="title-2">Evening Yoga Flow & Mobility Reset</h4>
+                <p class="caption-1">Post Work Relaxation • Lumbar Decompression & Stretching</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <span class="caption-3" style="color: #22C55E;"><i class="ph-fill ph-circle"></i> Open Batch</span>
+              <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="04:00 PM Evening Yoga">Reserve Seat</button>
+            </div>
+          </div>
+
+          <div class="timetable-row">
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 600; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+                05:00 PM
+              </div>
+              <div>
+                <h4 class="title-2">Power Zumba Party & Dance Cardio</h4>
+                <p class="caption-1">Sulochana Sharma • High Calorie Evening Session</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <span class="caption-3" style="color: #EAB308;"><i class="ph-fill ph-circle"></i> Popular Batch</span>
+              <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="05:00 PM Power Zumba">Reserve Seat</button>
+            </div>
+          </div>
+
+          <div class="timetable-row">
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <div style="background-color: var(--surface-secondary); padding: 8px 12px; border-radius: var(--radius-8); font-weight: 600; font-size: var(--text-sm); min-width: 85px; text-align: center;">
+                06:00 PM
+              </div>
+              <div>
+                <h4 class="title-2">Hardcore Bodybuilding & Heavy Lifts</h4>
+                <p class="caption-1">Weight Training Floor • Personal Trainer Spotting & Ice Bath Access</p>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: var(--spacing-300);">
+              <span class="caption-3" style="color: #22C55E;"><i class="ph-fill ph-circle"></i> Open Batch</span>
+              <button type="button" class="btn-primary btn-sm" data-open-booking data-slot="06:00 PM Heavy Lifts">Reserve Seat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: INSTRUCTORS & FOUNDER -->
+    <section class="section" id="instructors">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: var(--spacing-600);">
+          <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Our Leadership</span>
+          <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+            Guided by certified coaches
+          </h2>
+          <p class="body-3" style="color: var(--text-secondary);">
+            Meet the instructors leading Jaipur's most energetic fitness community at Trinity Mall.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-400);">
+          <!-- Instructor 1: Sulochana Sharma -->
+          <div class="card-flat" style="padding: 0; overflow: hidden;">
+            <div style="height: 320px; width: 100%;">
+              <img src="assets/images/sulochana_sharma.jpg" alt="Sulochana Sharma Founder of Ivy Studio Jaipur" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: var(--spacing-400);">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--spacing-50);">
+                <h3 class="title-1">Sulochana Sharma</h3>
+                <span class="caption-1" style="color: var(--accent-primary);">Founder</span>
+              </div>
+              <p class="caption-2" style="margin-bottom: var(--spacing-200);">Licensed Zumba Instructor • Certified Yoga Teacher</p>
+              <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+                Creator of Ivy Studio and @ivyweddingrituals. Dedicated to helping women and youths discover confidence through high-energy dance and mindful asana practice.
+              </p>
+              <div style="display: flex; gap: var(--spacing-200);">
+                <a href="https://www.instagram.com/zin_sulochanasharma" target="_blank" rel="noopener noreferrer" class="caption-1" style="color: var(--accent-primary); text-decoration: none;">
+                  <i class="ph ph-instagram-logo"></i> @zin_sulochanasharma
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructor 2: Aditi Jangid -->
+          <div class="card-flat" style="padding: 0; overflow: hidden;">
+            <div style="height: 320px; width: 100%;">
+              <img src="assets/images/coach_priya.jpg" alt="Aditi Jangid Dance and Zumba Instructor at Ivy Studio" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: var(--spacing-400);">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--spacing-50);">
+                <h3 class="title-1">Aditi Jangid</h3>
+                <span class="caption-1" style="color: var(--accent-primary);">Co-Lead</span>
+              </div>
+              <p class="caption-2" style="margin-bottom: var(--spacing-200);">Zumba Instructor • Choreographer</p>
+              <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+                Specializes in cardio dance routines, festive Garba workshops, and high tempo stepper HIIT drills for maximum caloric output.
+              </p>
+              <div style="display: flex; gap: var(--spacing-200);">
+                <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" class="caption-1" style="color: var(--accent-primary); text-decoration: none;">
+                  <i class="ph ph-instagram-logo"></i> @ivy_fitness_studio
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructor 3: Strength Head Coach -->
+          <div class="card-flat" style="padding: 0; overflow: hidden;">
+            <div style="height: 320px; width: 100%;">
+              <img src="assets/images/coach_arun.jpg" alt="Head Gym & Strength Trainer at Ivy Studio Jaipur" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: var(--spacing-400);">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--spacing-50);">
+                <h3 class="title-1">Strength Team</h3>
+                <span class="caption-1" style="color: var(--accent-primary);">Gym Floor</span>
+              </div>
+              <p class="caption-2" style="margin-bottom: var(--spacing-200);">Certified Strength & Bodybuilding Trainers</p>
+              <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+                On-floor supervision for heavy compound lifts, personalized workout routines, posture screening, and ice bath therapy guidance.
+              </p>
+              <div style="display: flex; gap: var(--spacing-200);">
+                <span class="caption-1" style="color: var(--text-subtle);">
+                  <i class="ph ph-shield-check"></i> Certified Floor Guidance
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: SPECIAL WORKSHOPS & WEDDING CHOREOGRAPHY -->
+    <section class="section" style="background-color: var(--surface-primary);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-600); align-items: center;">
+          <div>
+            <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Sister Brand Feature</span>
+            <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-200);">
+              Ivy Wedding Rituals & Seasonal Dance Workshops
+            </h2>
+            <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">
+              Beyond our daily fitness batches, Ivy Studio hosts viral social dance intensives, including 2-day Bachata dance masterclasses, annual Navratri Garba celebrations, and bespoke sangeet choreography through @ivyweddingrituals.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-200); margin-bottom: var(--spacing-400);">
+              <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Couple and family wedding sangeet choreography</li>
+              <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Latin Bachata partner footwork workshops</li>
+              <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Festive Navratri Garba & Dandiya dance fitness</li>
+            </ul>
+            <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="ph ph-chat-circle-dots"></i>
+              <span>Enquire for Choreography</span>
+            </a>
+          </div>
+          <div class="card-flat" style="padding: var(--spacing-100); overflow: hidden;">
+            <img src="assets/images/studio_ambiance.jpg" alt="Ivy Studio interior dancing floor with ambient lighting" style="width: 100%; height: 360px; object-fit: cover; border-radius: var(--radius-8);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: INAUGURAL LAUNCH MEMBERSHIPS (Real Pricing from Instagram) -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto var(--spacing-600) auto;">
+          <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Official Inaugural Rates</span>
+          <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+            Special launch membership plans
+          </h2>
+          <p class="body-3" style="color: var(--text-secondary);">
+            Celebration rates for our new Trinity Mall facility. Unlimited access with zero hidden admission fees.
+          </p>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-400);">
+          <!-- Plan 1: PRO -->
+          <div class="card-flat" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="caption-1" style="color: var(--text-subtle);">3 Months Track</span>
+              <h3 class="heading-4" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-50);">PRO Plan</h3>
+              <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">Full unlimited gym access for 90 days.</p>
+              <div style="margin-bottom: var(--spacing-400);">
+                <span class="heading-3">₹4,000</span>
+                <span class="caption-2">/ 3 months</span>
+              </div>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-200); margin-bottom: var(--spacing-400);">
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Unlimited gym floor access</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Free weight and cardio gear</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Locker and changing room access</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Monday to Saturday schedule</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" data-open-booking data-slot="PRO Plan (₹4,000 / 3 Months)">
+              Select PRO Plan
+            </button>
+          </div>
+
+          <!-- Plan 2: PRO+ (Highlighted) -->
+          <div class="card-flat" style="border-color: var(--accent-primary); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background-color: var(--accent-primary); color: #000; font-size: var(--text-xs); font-weight: 700; padding: 2px 10px; border-radius: var(--radius-full);">
+              BEST VALUE • 6 MONTHS
+            </div>
+            <div>
+              <span class="caption-1" style="color: var(--accent-primary);">Most Popular</span>
+              <h3 class="heading-4" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-50);">PRO+ Plan</h3>
+              <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">Unlimited gym access with diet consultation.</p>
+              <div style="margin-bottom: var(--spacing-400);">
+                <span class="heading-3">₹7,000</span>
+                <span class="caption-2">/ 6 months</span>
+              </div>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-200); margin-bottom: var(--spacing-400);">
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Unlimited gym and fitness floor access</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Personal fitness and posture assessment</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Personalized diet consultation and guide</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Priority batch booking support</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-primary" style="width: 100%; justify-content: center;" data-open-booking data-slot="PRO+ Plan (₹7,000 / 6 Months)">
+              Select PRO+ Plan
+            </button>
+          </div>
+
+          <!-- Plan 3: ELITE -->
+          <div class="card-flat" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span class="caption-1" style="color: var(--text-subtle);">Full Year Transformation</span>
+              <h3 class="heading-4" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-50);">ELITE Plan</h3>
+              <p class="body-3" style="color: var(--text-secondary); margin-bottom: var(--spacing-300);">Complete annual access with Personal Training.</p>
+              <div style="margin-bottom: var(--spacing-400);">
+                <span class="heading-3">₹11,000</span>
+                <span class="caption-2">/ 12 months</span>
+              </div>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-200); margin-bottom: var(--spacing-400);">
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> 365 days unlimited gym access</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Free Personal Training (PT) sessions included</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> In-depth body composition and posture analysis</li>
+                <li style="display: flex; gap: var(--spacing-100);"><i class="ph ph-check" style="color: var(--accent-primary);"></i> Ice bath recovery session credits</li>
+              </ul>
+            </div>
+            <button type="button" class="btn-secondary" style="width: 100%; justify-content: center;" data-open-booking data-slot="ELITE Plan (₹11,000 / 12 Months)">
+              Select ELITE Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- First Class Trial Banner -->
+        <div style="margin-top: var(--spacing-600); text-align: center; padding: var(--spacing-300); background-color: var(--surface-primary); border: 1px solid var(--border-primary); border-radius: var(--radius-12); display: flex; justify-content: center; align-items: center; gap: var(--spacing-200); flex-wrap: wrap;">
+          <i class="ph ph-ticket" style="font-size: 24px; color: var(--accent-primary);"></i>
+          <span class="body-2">First time at Ivy Studio? Book a complimentary 1st Class Trial and experience the studio before signing up.</span>
+          <button type="button" class="btn-primary btn-sm" data-open-booking>Claim Free Trial</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: FAQ (Real Studio Questions per A2) -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div style="max-width: 680px; margin-bottom: var(--spacing-600);">
+          <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 0.05em;">Got Questions?</span>
+          <h2 class="heading-3" style="margin-top: var(--spacing-75); margin-bottom: var(--spacing-100);">
+            Frequently asked questions
+          </h2>
+          <p class="body-3" style="color: var(--text-secondary);">
+            Details on trial sessions, batch timings, location in Jaipur, and membership plans.
+          </p>
+        </div>
+
+        <div style="max-width: 800px;">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Where exactly is Ivy Studio located in Jaipur?</span>
+              <i class="ph ph-caret-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Ivy Studio is located on the 2nd Floor of Mahima's Trinity Mall, Swej Farm, Sodala, Jaipur, Rajasthan 302019. The mall features elevator access and dedicated parking facilities for two-wheelers and cars.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How do I book my first free trial class?</span>
+              <i class="ph ph-caret-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Click the "Book Free Trial Class" button on this website or call / WhatsApp us at +91 88244 59354 or +91 79760 20209. You will receive an entry confirmation for your chosen morning or evening slot.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Can beginners join Zumba or Yoga without past experience?</span>
+              <i class="ph ph-caret-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Yes, absolutely. Our Zumba batches are beginner-friendly with easy-to-follow choreography. Founder Sulochana Sharma demonstrates beginner adaptations so you feel comfortable from minute one.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What are the daily morning and evening batch timings?</span>
+              <i class="ph ph-caret-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              We operate Monday through Saturday. Morning batches run at 06:00 AM, 07:00 AM, 08:00 AM, and 09:00 AM. Evening batches run at 04:00 PM, 05:00 PM, and 06:00 PM.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How does the Ice Bath / Cold Plunge therapy work?</span>
+              <i class="ph ph-caret-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Our cold immersion tubs are temperature controlled to reduce acute muscle soreness, improve circulation, and speed up muscular recovery after heavy lifting or intense dance cardio.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Do you offer wedding sangeet choreography?</span>
+              <i class="ph ph-caret-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              Yes, through our dedicated wedding choreography brand @ivyweddingrituals, we create custom sangeet routines, couple entries, and family dance concepts. Call +91 88244 59354 for consultation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: FINAL CTA -->
+    <section class="section" style="background-color: var(--surface-primary);">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto;">
+          <h2 class="heading-2" style="margin-bottom: var(--spacing-200);">
+            Join the Ivy Studio community in Jaipur
+          </h2>
+          <p class="body-2" style="color: var(--text-secondary); margin-bottom: var(--spacing-400);">
+            Book your free trial class today at Mahima's Trinity Mall, Swej Farm. Experience the energy of Zumba, the serenity of Yoga, and the power of heavy lifting.
+          </p>
+          <div style="display: flex; justify-content: center; gap: var(--spacing-200); flex-wrap: wrap;">
+            <button type="button" class="btn-primary" data-open-booking>
+              <i class="ph ph-ticket"></i>
+              <span>Book Free Trial Class</span>
+            </button>
+            <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <i class="ph ph-whatsapp-logo"></i>
+              <span>Chat on WhatsApp (+91 88244 59354)</span>
+            </a>
+          </div>
+          <p class="caption-2" style="margin-top: var(--spacing-300);">
+            Follow our daily routines and student reels on Instagram: @ivy_fitness_studio
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER per B10 -->
+  <footer class="footer">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--spacing-600); margin-bottom: var(--spacing-700);">
+        <div>
+          <div class="nav-logo" style="margin-bottom: var(--spacing-200);">
+            <div class="nav-logo-mark">IV</div>
+            <span class="body-1">IVY STUDIO — DANCE & FITNESS</span>
+          </div>
+          <p class="body-3" style="color: var(--text-secondary); max-width: 320px; margin-bottom: var(--spacing-300);">
+            Jaipur's dynamic hub for licensed Zumba, certified Yoga, heavy gym workouts, and ice bath therapy at Swej Farm, Sodala.
+          </p>
+          <div style="display: flex; gap: var(--spacing-200); color: var(--text-subtle);">
+            <a href="https://www.instagram.com/ivy_fitness_studio" target="_blank" rel="noopener noreferrer" style="color: inherit; font-size: 22px;" aria-label="Ivy Studio on Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="https://wa.me/918824459354" target="_blank" rel="noopener noreferrer" style="color: inherit; font-size: 22px;" aria-label="Ivy Studio WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+            <a href="https://www.threads.net/@ivy_fitness_studio" target="_blank" rel="noopener noreferrer" style="color: inherit; font-size: 22px;" aria-label="Ivy Studio Threads"><i class="ph ph-at"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="title-3" style="margin-bottom: var(--spacing-300); color: var(--text-primary);">Disciplines</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-100);">
+            <li><a href="#programs" class="caption-1" style="text-decoration: none;">Zumba Fitness</a></li>
+            <li><a href="#programs" class="caption-1" style="text-decoration: none;">Classical Yoga</a></li>
+            <li><a href="#programs" class="caption-1" style="text-decoration: none;">Heavy Gym & Strength</a></li>
+            <li><a href="#programs" class="caption-1" style="text-decoration: none;">Ice Bath Therapy</a></li>
+            <li><a href="#instructors" class="caption-1" style="text-decoration: none;">Wedding Choreography</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="title-3" style="margin-bottom: var(--spacing-300); color: var(--text-primary);">Navigation</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--spacing-100);">
+            <li><a href="#timetable" class="caption-1" style="text-decoration: none;">Daily Batches</a></li>
+            <li><a href="#instructors" class="caption-1" style="text-decoration: none;">Instructors</a></li>
+            <li><a href="#pricing" class="caption-1" style="text-decoration: none;">Membership Plans</a></li>
+            <li><a href="#faq" class="caption-1" style="text-decoration: none;">FAQ & Support</a></li>
+            <li><a href="404.html" class="caption-1" style="text-decoration: none;">404 Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="title-3" style="margin-bottom: var(--spacing-300); color: var(--text-primary);">Studio Visit</h4>
+          <p class="caption-1" style="margin-bottom: var(--spacing-100);">
+            2nd Floor, Mahima's Trinity Mall,<br>Swej Farm, Sodala, Jaipur,<br>Rajasthan 302019
+          </p>
+          <p class="caption-1" style="margin-bottom: var(--spacing-100);">
+            Mon - Sat: 6:00 AM - 10:00 AM<br>Evening: 4:00 PM - 7:00 PM
+          </p>
+          <p class="caption-1" style="color: var(--accent-primary);">
+            +91 88244 59354 / +91 79760 20209
+          </p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--border-primary); padding-top: var(--spacing-400); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-200);">
+        <p class="caption-2">© 2026 Ivy Studio — Dance & Fitness. All rights reserved.</p>
+        <div style="display: flex; gap: var(--spacing-300);">
+          <a href="privacy.html" class="caption-2" style="text-decoration: none;">Privacy Policy</a>
+          <a href="privacy.html#terms" class="caption-2" style="text-decoration: none;">Membership Terms</a>
+          <a href="privacy.html#studio-rules" class="caption-2" style="text-decoration: none;">Studio Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: FREE TRIAL CLASS BOOKING (With Client-Side Validation) -->
+  <div id="booking-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-booking-title">
+    <div class="modal-content">
+      <button type="button" class="modal-close" data-close-booking aria-label="Close booking modal">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div style="margin-bottom: var(--spacing-300);">
+        <span class="caption-1" style="color: var(--accent-primary); text-transform: uppercase;">Jaipur Studio Trial</span>
+        <h3 id="modal-booking-title" class="title-1" style="margin-top: var(--spacing-50);">Book Your Free Trial Class</h3>
+        <p class="caption-1">Join a complimentary Zumba, Yoga, or Gym session at Mahima's Trinity Mall, Swej Farm.</p>
+      </div>
+
+      <form id="booking-form" novalidate>
+        <input type="hidden" id="booking-slot-input" name="slot" value="General Trial Batch">
+
+        <div class="form-group">
+          <label for="field-name" class="form-label">Full Name *</label>
+          <input type="text" id="field-name" class="form-input" placeholder="e.g. Priya Sharma" required>
+          <div class="form-error">Please enter your full legal name</div>
+        </div>
+
+        <div class="form-group">
+          <label for="field-phone" class="form-label">WhatsApp Mobile Number *</label>
+          <input type="tel" id="field-phone" class="form-input" placeholder="10-digit number (e.g. 8824459354)" required>
+          <div class="form-error">Enter a valid 10-digit mobile number</div>
+        </div>
+
+        <div class="form-group">
+          <label for="field-email" class="form-label">Email Address *</label>
+          <input type="email" id="field-email" class="form-input" placeholder="priya@example.com" required>
+          <div class="form-error">Enter a valid email address</div>
+        </div>
+
+        <div class="form-group">
+          <label for="field-goal" class="form-label">Primary Interest *</label>
+          <select id="field-goal" class="form-select" required>
+            <option value="">Select your workout preference</option>
+            <option value="zumba">Zumba Dance Fitness</option>
+            <option value="yoga">Classical & Power Yoga</option>
+            <option value="gym">Hardcore Gym & Weight Lifting</option>
+            <option value="recovery">Ice Bath & Cold Plunge Therapy</option>
+            <option value="wedding">Wedding Choreography (@ivyweddingrituals)</option>
+          </select>
+          <div class="form-error">Select your primary fitness objective</div>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 10px 16px;">
+          <i class="ph ph-calendar-check"></i>
+          <span>Confirm Free Trial Class</span>
+        </button>
+
+        <p class="caption-2" style="text-align: center; margin-top: var(--spacing-200);">
+          We respect your privacy. Founder Sulochana Sharma's team will WhatsApp your pass details.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: INTERACTIVE STUDIO REEL & TOUR -->
+  <div id="reel-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="reel-title">
+    <div class="modal-content" style="max-width: 720px;">
+      <button type="button" class="modal-close" data-close-reel aria-label="Close studio reel">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div style="margin-bottom: var(--spacing-300);">
+        <span class="caption-1" style="color: var(--accent-primary);">Instagram Showcase • @ivy_fitness_studio</span>
+        <h3 id="reel-title" class="title-1" style="margin-top: var(--spacing-50);">Zumba Dance & Fitness Floor</h3>
+        <p id="reel-desc" class="caption-1">High-energy Zumba group choreography with Sulochana Sharma at Mahima's Trinity Mall.</p>
+      </div>
+
+      <!-- Reel Visual Player -->
+      <div id="reel-media-placeholder" style="width: 100%; height: 380px; border-radius: var(--radius-12); background-size: cover; background-position: center; position: relative; border: 1px solid var(--border-primary); margin-bottom: var(--spacing-300); display: flex; align-items: center; justify-content: center;">
+        <div style="background-color: rgba(0,0,0,0.6); padding: var(--spacing-200); border-radius: var(--radius-full); color: #fff; font-size: 32px; display: flex; align-items: center; justify-content: center;">
+          <i class="ph-fill ph-play"></i>
+        </div>
+        <div style="position: absolute; bottom: var(--spacing-200); left: var(--spacing-200); background-color: rgba(24,24,24,0.9); padding: 4px 10px; border-radius: var(--radius-4); font-size: var(--text-xs); color: var(--accent-primary);">
+          ● Trinity Mall Studio Feed
+        </div>
+      </div>
+
+      <!-- Reel Tab Selectors -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-100);">
+        <button type="button" class="reel-tab" style="padding: 6px; border-radius: var(--radius-6); border: 1px solid var(--accent-primary); background-color: var(--surface-secondary); color: var(--text-primary); cursor: pointer; text-align: left; font-size: var(--text-xs);">
+          <strong>01. Zumba</strong>
+        </button>
+        <button type="button" class="reel-tab" style="padding: 6px; border-radius: var(--radius-6); border: 1px solid var(--border-primary); background-color: var(--surface-primary); color: var(--text-subtle); cursor: pointer; text-align: left; font-size: var(--text-xs);">
+          <strong>02. Yoga</strong>
+        </button>
+        <button type="button" class="reel-tab" style="padding: 6px; border-radius: var(--radius-6); border: 1px solid var(--border-primary); background-color: var(--surface-primary); color: var(--text-subtle); cursor: pointer; text-align: left; font-size: var(--text-xs);">
+          <strong>03. Heavy Gym</strong>
+        </button>
+        <button type="button" class="reel-tab" style="padding: 6px; border-radius: var(--radius-6); border: 1px solid var(--border-primary); background-color: var(--surface-primary); color: var(--text-subtle); cursor: pointer; text-align: left; font-size: var(--text-xs);">
+          <strong>04. Ice Bath</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <i class="ph-fill ph-check-circle" style="color: var(--accent-primary); font-size: 24px;"></i>
+    <div>
+      <p class="body-1" style="font-size: var(--text-sm);">Trial Booked Successfully</p>
+      <p id="toast-text" class="caption-2" style="color: var(--text-secondary);"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/runner.js"></script>
+</body>
+</html>
