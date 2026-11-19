@@ -95,17 +95,49 @@
         <li><a href="#booking" class="nav-link" style="color: #3D4E3D;">Private Passes</a></li>
       </ul>
 
-      <button type="button" class="btn-primary btn-sm" style="background-color: #789575; color: #FFFFFF; border-color: #789575;" data-open-booking data-slot="Sage Yoga Trial">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button type="button" class="btn-primary btn-sm" style="background-color: #789575; color: #FFFFFF; border-color: #789575;" data-open-booking data-slot="Sage Yoga Trial">
+          <i class="ph ph-flower-lotus"></i>
+          <span>Book Zen Trial</span>
+        </button>
+        <button type="button" id="mobile-menu-toggle" class="btn-secondary btn-sm" style="display: none; padding: 8px 10px; background-color: #FFFFFF; border-color: #C5CCA5; color: #1E2D1E;" aria-label="Open mobile menu">
+          <i class="ph ph-list" style="font-size: 20px;"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-nav-panel" style="display: none; position: fixed; inset: 0; background-color: rgba(229, 232, 206, 0.98); z-index: 250; flex-direction: column; padding: var(--spacing-600) var(--spacing-400); justify-content: space-between;">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-600);">
+        <div class="nav-logo" style="color: #1E2D1E;">
+          <div class="nav-logo-mark" style="background-color: #789575; color: #E5E8CE;">IV</div>
+          <span class="body-1" style="font-weight: 700;">IVY MINDFUL</span>
+        </div>
+        <button id="mobile-nav-close" style="background: none; border: none; color: #1E2D1E; font-size: 28px; cursor: pointer;">
+          <i class="ph ph-x"></i>
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-300);">
+        <a href="#asanas" class="mobile-nav-link title-1" style="color: #1E2D1E; text-decoration: none;">Asana Gallery</a>
+        <a href="#schedule" class="mobile-nav-link title-1" style="color: #1E2D1E; text-decoration: none;">Morning Flow</a>
+        <a href="#founder" class="mobile-nav-link title-1" style="color: #1E2D1E; text-decoration: none;">Sulochana Sharma</a>
+        <a href="index.html" class="mobile-nav-link title-1" style="color: #789575; text-decoration: none;">All Studio Portal</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--spacing-200);">
+      <button type="button" class="btn-primary" style="width: 100%; justify-content: center; background-color: #789575; border-color: #789575; color: #FFFFFF;" data-open-booking>
         <i class="ph ph-flower-lotus"></i>
         <span>Book Zen Trial</span>
       </button>
-    </nav>
-  </header>
+    </div>
+  </div>
 
   <main style="padding-top: 140px;">
     <!-- HERO SECTION: Minimal Editorial Sage -->
     <section class="container" style="margin-bottom: var(--spacing-800);">
-      <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--spacing-600); align-items: center;">
+      <div class="hero-grid-split" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--spacing-600); align-items: center;">
         <div>
           <div class="sage-badge" style="margin-bottom: var(--spacing-300);">
             <i class="ph ph-sparkle"></i>

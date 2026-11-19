@@ -848,3 +848,135 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #22C55E;
   color: #000000;
 }
+
+/* ==========================================================================
+   HIGH-PERFORMANCE RESPONSIVE SYSTEM (PC, TABLET, PHONE)
+   ========================================================================== */
+
+/* Tablets & Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: var(--spacing-300);
+    padding-right: var(--spacing-300);
+  }
+
+  .hero-editorial-title, .hero-neon-title, .hero-crimson-title {
+    font-size: 56px !important;
+    line-height: 1.02 !important;
+  }
+}
+
+/* Tablets & Mobile Phones (max-width: 880px) */
+@media (max-width: 880px) {
+  .nav-floating {
+    top: 8px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100% - 16px) !important;
+    padding: 8px 12px !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  #mobile-menu-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive Theme Switcher: Docked above bottom bar on touch screens */
+  .theme-switcher-bar {
+    top: auto !important;
+    bottom: 58px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    width: max-content !important;
+    max-width: calc(100vw - 24px) !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 3px 6px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  /* Stacked Grid Layouts for Hero */
+  .hero-grid-split {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-500) !important;
+  }
+
+  .hero-editorial-title, .hero-neon-title, .hero-crimson-title {
+    font-size: 42px !important;
+    line-height: 1.05 !important;
+  }
+
+  .matrix-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .section {
+    padding-top: var(--spacing-700) !important;
+    padding-bottom: var(--spacing-700) !important;
+  }
+
+  .section-hero {
+    padding-top: 110px !important;
+    padding-bottom: var(--spacing-700) !important;
+  }
+
+  /* Touch Target minimums (44px height) */
+  .btn-primary, .btn-secondary, button {
+    min-height: 44px;
+  }
+}
+
+/* Small Mobile Phones (max-width: 500px) */
+@media (max-width: 500px) {
+  .container {
+    padding-left: var(--spacing-200) !important;
+    padding-right: var(--spacing-200) !important;
+  }
+
+  .hero-editorial-title, .hero-neon-title, .hero-crimson-title {
+    font-size: 32px !important;
+    line-height: 1.08 !important;
+  }
+
+  .scroll-cascade-container {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-300) !important;
+  }
+
+  .timetable-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--spacing-200) !important;
+  }
+
+  .timetable-row > div:last-child {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .timetable-row button {
+    width: 100% !important;
+  }
+
+  .card-flat {
+    padding: var(--spacing-300) !important;
+  }
+
+  .theme-pill-btn {
+    padding: 5px 8px !important;
+    font-size: 10px !important;
+  }
+
+  #runner-toggle-pill {
+    bottom: 10px !important;
+    left: 10px !important;
+    padding: 4px 8px !important;
+    font-size: 10px !important;
+  }
+}

@@ -87,17 +87,49 @@
         <li><a href="#trial" class="nav-link" style="color: #FFF0DC;">Trial Pass</a></li>
       </ul>
 
-      <button type="button" class="btn-primary btn-sm" style="background-color: #FFF0DC; color: #790B13; border: none; font-weight: 700;" data-open-booking data-slot="Crimson Iron Trial">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button type="button" class="btn-primary btn-sm" style="background-color: #FFF0DC; color: #790B13; border: none; font-weight: 700;" data-open-booking data-slot="Crimson Iron Trial">
+          <i class="ph-bold ph-barbell"></i>
+          <span>Book Iron Pass</span>
+        </button>
+        <button type="button" id="mobile-menu-toggle" class="btn-secondary btn-sm" style="display: none; padding: 8px 10px; border: 1px solid #FFF0DC; color: #FFF0DC;" aria-label="Open mobile menu">
+          <i class="ph-bold ph-list" style="font-size: 20px;"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-nav-panel" style="display: none; position: fixed; inset: 0; background-color: rgba(31, 2, 5, 0.98); z-index: 250; flex-direction: column; padding: var(--spacing-600) var(--spacing-400); justify-content: space-between;">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-600);">
+        <div class="nav-logo" style="color: #FFF0DC;">
+          <div class="nav-logo-mark" style="background-color: #FFF0DC; color: #790B13; font-weight: 800;">IV</div>
+          <span class="body-1" style="font-weight: 800;">IVY IRON & ICE</span>
+        </div>
+        <button id="mobile-nav-close" style="background: none; border: none; color: #FFF0DC; font-size: 28px; cursor: pointer;">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-300);">
+        <a href="#iron" class="mobile-nav-link title-1" style="color: #FFF0DC; text-decoration: none;">Heavy Lifts</a>
+        <a href="#icebath" class="mobile-nav-link title-1" style="color: #FFF0DC; text-decoration: none;">Cold Plunge</a>
+        <a href="#plans" class="mobile-nav-link title-1" style="color: #FFF0DC; text-decoration: none;">Inaugural Rates</a>
+        <a href="index.html" class="mobile-nav-link title-1" style="color: #FFF0DC; text-decoration: none;">All Studio Portal</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--spacing-200);">
+      <button type="button" class="btn-primary" style="width: 100%; justify-content: center; background-color: #FFF0DC; color: #790B13; border: none; font-weight: 800;" data-open-booking>
         <i class="ph-bold ph-barbell"></i>
         <span>Book Iron Pass</span>
       </button>
-    </nav>
-  </header>
+    </div>
+  </div>
 
   <main style="padding-top: 140px;">
     <!-- HERO SECTION: Dramatic Crimson & Warm Ivory -->
     <section class="container" style="margin-bottom: var(--spacing-800);">
-      <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--spacing-600); align-items: center;">
+      <div class="hero-grid-split" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--spacing-600); align-items: center;">
         <div>
           <div class="crimson-badge" style="margin-bottom: var(--spacing-300);">
             <i class="ph-bold ph-lightning"></i>
